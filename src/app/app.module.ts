@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { AddQuestionComponent } from './add-question/add-question.component';
+import { WelcomeToTestComponent } from './welcome-to-test/welcome-to-test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     MainPageComponent,
-    AddQuestionComponent
+    AddQuestionComponent,
+    WelcomeToTestComponent
   ],
   imports: [
     BrowserModule,

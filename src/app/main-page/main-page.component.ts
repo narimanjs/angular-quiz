@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor(public router: Router) {
+  constructor(private router: Router) {
   }
 
   ngOnInit(): void {
@@ -16,15 +16,9 @@ export class MainPageComponent implements OnInit {
   addQuestion() {
     this.router.navigate(['../addQuestion'])
   }
-  goToTest() {
-    this.router.navigate(['../test'])
-  }
-  goToQuestions() {
-    this.router.navigate(['../questions'])
-  }
+
   finishTest() {
     console.log('finish');
-
   }
 
 
