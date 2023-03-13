@@ -7,6 +7,7 @@ import { TestComponent } from './test/test.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { AddQuestionComponent } from './add-question/add-question.component';
 import { WelcomeToTestComponent } from './welcome-to-test/welcome-to-test.component';
+import { FinishTestComponent } from './finish-test/finish-test.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { WelcomeToTestComponent } from './welcome-to-test/welcome-to-test.compon
     TestComponent,
     MainPageComponent,
     AddQuestionComponent,
-    WelcomeToTestComponent
+    WelcomeToTestComponent,
+    FinishTestComponent
   ],
   imports: [
     BrowserModule,
