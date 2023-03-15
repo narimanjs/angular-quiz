@@ -1,11 +1,13 @@
 <div class="container">
   <h2>Welcome to Quiz App</h2>
   <br />
+  <div class="name col-md-4 my-3">
+    <label for="">Введите имя: </label>
+    <br />
+    <input #name type="text" class="form-control" />
+  </div>
   <br />
-  <br />
-  <br />
-
-  <button class="btn btn-primary" (click)="goToTest()">
+  <button class="btn btn-primary" routerLink="/test" (click)="goToTest()">
     Начать тестирование
   </button>
 </div>

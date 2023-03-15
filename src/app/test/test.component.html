@@ -1,51 +1,37 @@
-<div class="container">
-  <h6>1. Вопрос 1+1?</h6>
-  <br />
-  <div class="form-check">
-    <input
-      class="form-check-input"
-      type="radio"
-      name="flexRadioDefault"
-      id="flexRadioDefault1"
-    />
-    <label class="form-check-label" for="flexRadioDefault1"> 11 </label>
+<div class="container mt-5">
+  <div class="card">
+    <div class="header__test">
+      <h3>Welcome, {{ name }}!</h3>
+      <span class="timer">Осталось: 15 мин</span>
+    </div>
+    <br />
+    <div class="question">
+      <div class="card">
+        <h3>{{ questionList[currentQuestion]?.questionText }}</h3>
+      </div>
+    </div>
+    <div class="options">
+      <ol *ngFor="let option of questionList[currentQuestion]?.options">
+        <li>
+          <div class="card">{{ option.text }}</div>
+        </li>
+      </ol>
+    </div>
+    <div class="btns">
+      <button class="btn btn-secondary" (click)="previousQuestion()">
+        <i class="fa fa-chevron-circle-left" aria-hidden="true">назад</i>
+      </button>
+      <button class="btn btn-secondary">обновить</button>
+      <button class="btn btn-secondary" (click)="nextQuestion()">
+        <i class="fa fa-chevron-circle-right" aria-hidden="true">вперед</i>
+      </button>
+    </div>
+    <br />
+    <div class="btn">
+      <button class="btn btn-primary" type="submit" (click)="finishTest()">
+        Закончить тестирование
+      </button>
+    </div>
   </div>
-  <div class="form-check">
-    <input
-      class="form-check-input"
-      type="radio"
-      name="flexRadioDefault"
-      id="flexRadioDefault2"
-      checked
-    />
-    <label class="form-check-label" for="flexRadioDefault2"> 3 </label>
-  </div>
-  <div class="form-check">
-    <input
-      class="form-check-input"
-      type="radio"
-      name="flexRadioDefault"
-      id="flexRadioDefault1"
-    />
-    <label class="form-check-label" for="flexRadioDefault3"> 2 </label>
-  </div>
-  <div class="form-check">
-    <input
-      class="form-check-input"
-      type="radio"
-      name="flexRadioDefault"
-      id="flexRadioDefault2"
-      checked
-    />
-    <label class="form-check-label" for="flexRadioDefault4"> "11" </label>
-  </div>
-  <br />
-  <div class="btns">
-    <button class="btn btn-secondary btn-sm">Назад</button>
-    <button class="btn btn-secondary btn-sm">Далее</button>
-  </div>
-  <br />
-  <button class="btn btn-primary" type="submit" (click)="finishTest()">
-    Закончить тестирование
-  </button>
 </div>
+<router-outlet></router-outlet>

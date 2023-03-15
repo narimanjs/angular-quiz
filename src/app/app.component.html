@@ -1,20 +1,24 @@
-<header class="header">
-  <nav class="navigation">
-    <ul>
-      <li>
-        <a routerLink="../main" id="questions" routerLinkActive="active"
-          >Вопросы</a
-        >
-      </li>
-      <li>
-        <a routerLink="../welcome" id="welcome" routerLinkActive="active"
-          >Пройти тест</a
-        >
-      </li>
-    </ul>
-  </nav>
-</header>
-<main>
-  <router-outlet></router-outlet>
-</main>
-<footer></footer>
+<div class="container">
+  <div class="card">
+    <header class="header">
+      <nav class="navigation">
+        <ul>
+          <li>
+            <a routerLink="../main" id="questions" routerLinkActive="active"
+              >Вопросы</a
+            >
+          </li>
+          <li>
+            <a routerLink="../welcome" id="welcome" routerLinkActive="active"
+              >Пройти тест</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <footer></footer>
+</div>

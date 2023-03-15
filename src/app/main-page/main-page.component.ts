@@ -17,9 +17,5 @@ export class MainPageComponent implements OnInit {
     this.router.navigate(['../addQuestion'])
   }
 
-  finishTest() {
-    console.log('finish');
-  }
-
 
 }

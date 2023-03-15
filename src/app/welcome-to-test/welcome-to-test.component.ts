@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,12 +8,13 @@ import { Router } from '@angular/router';
 })
 export class WelcomeToTestComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  @ViewChild('name') nameKey!: ElementRef
+  constructor() { }
 
   ngOnInit(): void {
   }
   goToTest() {
-    this.router.navigate(['../test'])
+    localStorage.setItem("name", this.nameKey.nativeElement.value);
   }
 
 }

@@ -9,7 +9,8 @@ export class FinishTestComponent implements OnInit {
 
   constructor() { }
 
+  public name: string | null = "";
   ngOnInit(): void {
+    this.name = localStorage.getItem("name")!;
   }
-
 }
