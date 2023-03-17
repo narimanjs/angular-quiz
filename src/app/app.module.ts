@@ -10,6 +10,7 @@ import { WelcomeToTestComponent } from './welcome-to-test/welcome-to-test.compon
 import { FinishTestComponent } from './finish-test/finish-test.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,

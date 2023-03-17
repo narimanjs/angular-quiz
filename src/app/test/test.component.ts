@@ -16,6 +16,8 @@ export class TestComponent implements OnInit {
   public name: string | null = "";
   public questionList: any = [];
   public currentQuestion: number = 0;
+  correctAnswer: number = 0;
+  inCorrectAnswer: number = 0;
   ngOnInit(): void {
     this.name = localStorage.getItem("name")!;
     this.getAllQuestions();
@@ -31,5 +33,14 @@ export class TestComponent implements OnInit {
   }
   previousQuestion() {
     this.currentQuestion--;
+  }
+  answer(currentQno: number, option: any) {
+    if (option.correct) {
+      this.correctAnswer++;
+      this.currentQuestion++;
+    } else {
+      this.inCorrectAnswer++;
+      this.currentQuestion++;
+    }
   }
 }

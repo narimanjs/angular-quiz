@@ -1,0 +1,57 @@
+{
+  "questions": [
+    {
+          "questionText": "Сколько будет 1 + 1?",
+          "options": [{
+            "text": 2,
+            "correct": true
+          },
+          {
+            "text": "'2'"
+          },
+          {
+            "text": 11
+
+          },
+          {
+            "text": 22
+          }
+        ]
+    },
+    {
+      "questionText": "Сколько будет 1 + '1'?",
+          "options": [{
+            "text": "2"
+          },
+          {
+            "text": 2
+          },
+          {
+            "text": "'11'",
+            "correct": true
+
+          },
+          {
+            "text": 22
+          }
+        ]
+    },
+    {
+      "questionText": "Сколько будет 1/0?",
+          "options": [{
+            "text": "infinity",
+            "correct": true
+          },
+          {
+            "text": "NaN"
+          },
+          {
+            "text": "11"
+          },
+          {
+            "text": "undefined"
+          }
+        ]
+    }
+]
+}

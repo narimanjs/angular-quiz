@@ -2,7 +2,7 @@
   <div class="card">
     <div class="header__test">
       <h3>Welcome, {{ name }}!</h3>
-      <span class="timer">Осталось: 15 мин</span>
+      <span class="timer">60</span>
     </div>
     <br />
     <div class="question">
@@ -12,7 +12,7 @@
     </div>
     <div class="options">
       <ol *ngFor="let option of questionList[currentQuestion]?.options">
-        <li>
+        <li (click)="answer(currentQuestion + 1, option)">
           <div class="card">{{ option.text }}</div>
         </li>
       </ol>
