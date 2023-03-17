@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { QuestionService } from '../service/question.service';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-test',
@@ -18,6 +19,8 @@ export class TestComponent implements OnInit {
   public currentQuestion: number = 0;
   correctAnswer: number = 0;
   inCorrectAnswer: number = 0;
+  counter = 900;
+  interval$: any;
   ngOnInit(): void {
     this.name = localStorage.getItem("name")!;
     this.getAllQuestions();
@@ -43,4 +46,21 @@ export class TestComponent implements OnInit {
       this.currentQuestion++;
     }
   }
+  startCounter() {
+    this.interval$ = interval(1000)
+      .subscribe(val => {
+        this.counter--;
+        if (this.counter === 0) {
+          this.currentQuestion++;
+        }
+      })
+
+  }
+  stopCounter() {
+
+  }
+  resetCounter() {
+
+  }
 }
+
